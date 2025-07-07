@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|c:\\users\\hp\\source\\repos\\logindashboardapi\\logindashboardapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|solutionrelative:logindashboardapi\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|c:\\users\\hp\\source\\repos\\logindashboardapi\\logindashboardapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|solutionrelative:logindashboardapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|c:\\users\\hp\\source\\repos\\logindashboardapi\\logindashboardapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|solutionrelative:logindashboardapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|c:\\users\\hp\\source\\repos\\logindashboardapi\\logindashboardapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|solutionrelative:logindashboardapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|c:\\users\\hp\\source\\repos\\logindashboardapi\\logindashboardapi\\models\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC2A0933-3BB0-47C2-AC40-CAF360BB2FE8}|LoginDashboardApi\\LoginDashboardApi.csproj|solutionrelative:logindashboardapi\\models\\userlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "LoginDashboardApi\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "LoginDashboardApi\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T02:05:09.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "LoginDashboardApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "LoginDashboardApi\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAAwFIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T01:55:40.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\Program.cs",
+              "RelativeDocumentMoniker": "LoginDashboardApi\\Program.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\Program.cs",
+              "RelativeToolTip": "LoginDashboardApi\\Program.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAwDsAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T02:06:03.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\appsettings.json",
+              "RelativeDocumentMoniker": "LoginDashboardApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\appsettings.json",
+              "RelativeToolTip": "LoginDashboardApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-06T02:15:53.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserLogin.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\Models\\UserLogin.cs",
+              "RelativeDocumentMoniker": "LoginDashboardApi\\Models\\UserLogin.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\LoginDashboardApi\\LoginDashboardApi\\Models\\UserLogin.cs",
+              "RelativeToolTip": "LoginDashboardApi\\Models\\UserLogin.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T01:53:51.802Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
