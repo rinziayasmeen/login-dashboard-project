@@ -24,13 +24,25 @@ export class LoginComponent {
   }
 
   onSubmit(): void {
-    if (this.loginForm.invalid) return;
+  if (this.loginForm.invalid) return;
 
-    const credentials = this.loginForm.value;
+  const credentials = this.loginForm.value;
 
-    this.auth.login(credentials).subscribe({
-      next: () => this.router.navigate(['/dashboard']),
-      error: () => (this.errorMessage = 'Invalid username or password'),
-    });
-  }
+  this.auth.login(credentials).subscribe({
+    next: () => {
+      this.errorMessage = ''; // clear previous error
+      this.router.navigate(['/dashboard']);
+    },
+    error: (err) => {
+      if (err.status === 429) {
+        this.errorMessage = 'Too many login attempts. Please try again later.';
+      } else if (err.status === 401) {
+        this.errorMessage = 'Invalid username or password.';
+      } else {
+        this.errorMessage = 'Something went wrong. Please try again.';
+      }
+    },
+  });
+}
+
 }

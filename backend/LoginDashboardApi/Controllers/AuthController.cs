@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace LoginDashboardApi.Controllers
 {
@@ -13,10 +14,12 @@ namespace LoginDashboardApi.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _configuration;
+        private readonly IMemoryCache _cache;
 
-        public AuthController(IConfiguration configuration)
+        public AuthController(IConfiguration configuration, IMemoryCache cache)
         {
             _configuration = configuration;
+            _cache = cache;
         }
 
         private static readonly List<(string Username, string Password)> Users = new()
@@ -24,37 +27,33 @@ namespace LoginDashboardApi.Controllers
             ("admin", "admin123")
         };
 
-        private static readonly Dictionary<string, (int Count, DateTime Timestamp)> RateLimitTracker = new();
         private const int MaxAttempts = 5;
-        private const int WindowSeconds = 60;
+        private static readonly TimeSpan Window = TimeSpan.FromMinutes(1);
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserLogin login)
         {
             var ip = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "unknown";
-            var now = DateTime.UtcNow;
+            var cacheKey = $"login_attempts_{ip}";
 
-            if (RateLimitTracker.ContainsKey(ip))
+            var attempt = _cache.GetOrCreate(cacheKey, entry =>
             {
-                var (count, timestamp) = RateLimitTracker[ip];
-                if ((now - timestamp).TotalSeconds <= WindowSeconds)
-                {
-                    if (count >= MaxAttempts)
-                        return StatusCode(429, "Too many attempts. Try later.");
-                    RateLimitTracker[ip] = (count + 1, timestamp);
-                }
-                else
-                {
-                    RateLimitTracker[ip] = (1, now);
-                }
-            }
-            else
+                entry.AbsoluteExpirationRelativeToNow = Window;
+                return 0;
+            });
+
+            if (attempt >= MaxAttempts)
             {
-                RateLimitTracker[ip] = (1, now);
+                return StatusCode(429, "Too many attempts. Try again later.");
             }
+
+            _cache.Set(cacheKey, attempt + 1, Window);
 
             if (!Users.Any(u => u.Username == login.Username && u.Password == login.Password))
                 return Unauthorized();
+
+            // If login succeeds, reset attempts
+            _cache.Remove(cacheKey);
 
             var token = GenerateJwtToken(login.Username);
             return Ok(new { token });

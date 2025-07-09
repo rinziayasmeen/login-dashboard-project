@@ -3,6 +3,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 var builder = WebApplication.CreateBuilder(args);
+//Register in-memory cache for rate limiting
+builder.Services.AddMemoryCache();
 
 // Add services to the container.
 
